@@ -12,5 +12,8 @@
     "chalk": "^2.4.1",
     "validator": "^10.8.0",
     "yargs": "^15.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1"
   }
 }
