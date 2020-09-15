@@ -12,3 +12,10 @@ request({ url: url, json: true }, (error, response) => {
                 `The temp is ${cur.temperature} degrees, it feels like ${cur.feelslike}, ` +
                 `and there is an a ${cur.precip}% of rain.`)
 })
+
+const geocodeKey = 'pk.eyJ1Ijoicy10b3RoZS1hbSIsImEiOiJja2YzODZ3NWwwMG85MnVtbm80NnFpM3FvIn0.j2dXgLI9wX-oJbPTAK4ubA'
+const geocodeURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=${geocodeKey}&limit=1`
+request({ url: geocodeURL, json: true }, (error, response) => {
+    const data = response.body.features[0]
+    console.log(`The Latitude for Los Angles California is ${data.center[1]} the Longitude is ${data.center[0]}`)
+})
