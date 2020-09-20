@@ -6,7 +6,9 @@
   "dependencies": {
     "postman-request": "^2.88.1-postman.24"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "2.1.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
